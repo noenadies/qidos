@@ -8,7 +8,7 @@
 // Debido a las restricciones de los navegadores, la mayoría de los pedidos estan sujetas a la política de origen en el mismo lugar "same origin policy", o sea, que solo podrás cargar páginas desde el mismo dominio y no a otro dominio.  
 //Para hacer esto tendrás que usar los llamados iFrames ó creando un proxy puedes ver el video aquí.  http://www.youtube.com/watch?v=499EzEpPnXI
 	$(document).ready(function(e) {
-		$('#LoadPage').load('http://api.jquery.com/attr/', function(data) {
+		$('#LoadPage').load('https://www.google.es/', function(data) {
 			$(this).html(data);
 		});
 	});
