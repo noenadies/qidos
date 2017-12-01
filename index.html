@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<style>
+  .menu {
+    width: 20%;
+    height: 25px;
+    float: left;
+    padding: 10px;  
+    text-align: center;
+    background: #fff;
+    color: #000;
+  }
+  .menu:hover {
+    background: #000;
+    color: #fff;  
+  }
+  #content {
+    clear: both;
+    background: #e5e5e5;
+    padding: 0;
+    overflow-y: scroll;
+    width: 100%;
+    height: 600px;
+    border: 0;
+  }
+</style>
+</head>
+<body>
+  hola  aca  todods
+  <h1 id="holamundo"></h1>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+
+  var config = {
+    apiKey: "AIzaSyCS7_O4pberbmKQXiD23RGdaT4KiI8lRDM",
+    authDomain: "miwebgit.firebaseapp.com",
+    databaseURL: "https://miwebgit.firebaseio.com",
+    projectId: "miwebgit",
+    storageBucket: "",
+    messagingSenderId: "228436234375"
+  };
+  firebase.initializeApp(config);
+var a=0;
+  var jola=document.getElementById('holamundo');
+  var  dbref=firebase.database().ref().child('text');
+  dbref.on('value', function(snapshot) {
+  po( snapshot.val());
+});
+//a=jola;
+  console.log(a);
+  function po(ee){a=ee;console.log(a);
+
+    // alert("estoylisto");
+    var as='page1.html';
+     $('#content').attr('src',ee);
+
+
+  }
+
+  console.log(a);
+
+</script>
+<script>
+  
+
+
+
+
+
+
+
+
+
+   // alert("estoylisto");
+    //var as='page1.html';
+     //$('#content').attr('src',as);
+   
+</script>
+
+
+
+
+</body>
+</html>
